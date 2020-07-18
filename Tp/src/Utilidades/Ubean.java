@@ -32,7 +32,7 @@ public class Ubean {
 			
 			for(Method m : c.getDeclaredMethods()) 
 			{
-				if(m.getName().startsWith("set" + atributo)) 
+				if(m.getName().startsWith("set".concat(atributo))) 
 				{
 					try 
 					{
@@ -67,7 +67,7 @@ public class Ubean {
 			String atributo = att.substring(0, 1).toUpperCase() + att.substring(1);			
 			for(Method m : c.getDeclaredMethods()) 
 			{
-				if(m.getName().startsWith("get" + atributo))
+				if(m.getName().startsWith("get".concat(atributo)))
 				{
 					try 
 					{
